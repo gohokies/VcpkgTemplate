@@ -41,5 +41,6 @@ Write-Host "Installing vcpkg components for $TargetTriplet"
 & ./vcpkg install gtest:$TargetTriplet | Write-Host
 & ./vcpkg install benchmark:$TargetTriplet | Write-Host
 & ./vcpkg install zlib:$TargetTriplet | Write-Host
+& ./vcpkg install opencl:$TargetTriplet | Write-Host
 
 Pop-Location
