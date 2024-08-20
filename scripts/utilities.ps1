@@ -11,6 +11,9 @@ function GetArch
     if ($Arch -ieq "aarch64"){ return "arm64" }
     if ($Arch -ieq "arm"){ return "arm" }
     if ($Arch -ieq "armhf"){ return "arm" }
+    if ($Arch -ieq "arm64"){ return "arm64" }
+    if ($Arch -ieq "arm64ec"){ return "arm64ec" }
+
 
     return $Arch;
 }

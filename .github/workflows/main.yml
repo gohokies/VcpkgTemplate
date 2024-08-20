@@ -85,4 +85,4 @@ jobs:
 
       - name: Test Release configuration
         run: |
-          ctest --preset test-release
+          ctest --preset test-ninja-release

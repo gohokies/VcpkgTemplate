@@ -162,7 +162,7 @@ class WindowsBuilder : Builder
     {
         # Use default Visual Studio generator 
         $Generators = @("Visual Studio 16 2019", "Visual Studio 17 2022")
-        $Archs = @("x64", "x86", "arm64")
+        $Archs = @("x64", "x86", "arm64", "arm64ec")
 
         if (-Not ($Arch -eq "" -Or $Arch -in $Archs)){
             throw "Invalid target architecture"
