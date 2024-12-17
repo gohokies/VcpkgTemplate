@@ -1,10 +1,14 @@
 {
-    "version": 5,
+    "version": 4,
     "cmakeMinimumRequired": {
         "major": 3,
-        "minor": 21,
+        "minor": 23,
         "patch": 0
     },
+    "include": [
+        "preset-ninja-gcc.json",
+        "preset-vs2022-msvc.json"
+    ],
     "configurePresets": [
         {
             "name": "ninja-multi",
@@ -13,48 +17,6 @@
             "binaryDir": "${sourceDir}/builds/${presetName}",
             "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
-        },
-        {
-            "name": "msvc",
-            "hidden": true,
-            "displayName": "Microsoft VS2022",
-            "description": "Configure with vcpkg toolchain and generate VS2022 project files",
-            "binaryDir": "${sourceDir}/builds/${presetName}",
-            "generator": "Visual Studio 17 2022",
-            "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
-        },
-        {
-            "name": "msvc-x64",
-            "inherits": "msvc",
-            "displayName": "VS2022-x64",
-            "architecture":{
-                "value":"x64"
-            },
-            "cacheVariables": {
-                "VCPKG_TARGET_TRIPLET": "x64-windows"
-            }
-        },
-        {
-            "name": "msvc-arm64",
-            "inherits": "msvc",
-            "displayName": "VS2022-arm64",
-            "architecture":{
-                "value":"arm64"
-            },
-            "cacheVariables": {
-                "VCPKG_TARGET_TRIPLET": "arm64-windows"
-            }
-        },
-        {
-            "name": "msvc-arm64ec",
-            "inherits": "msvc",
-            "displayName": "VS2022-arm64ec",
-            "architecture":{
-                "value":"arm64ec"
-            },
-            "cacheVariables": {
-                "VCPKG_TARGET_TRIPLET": "arm64ec-windows"
-            }
         }
     ],
     "buildPresets": [
@@ -70,26 +32,6 @@
             "configurePreset": "ninja-multi",
             "displayName": "Build (Release)",
             "description": "Build with Ninja (Release)",
-            "configuration": "Release"
-        },
-        {
-            "name": "ninja",
-            "configurePreset": "ninja-multi",
-            "displayName": "Build",
-            "description": "Build with Ninja"
-        },
-        {
-            "name": "msvc-x64-debug",
-            "configurePreset": "msvc-x64",
-            "displayName": "Build x64 (Debug)",
-            "description": "Build x64 (Debug)",
-            "configuration": "Debug"
-        },
-        {
-            "name": "msvc-x64-release",
-            "configurePreset": "msvc-x64",
-            "displayName": "Build x64 (Release)",
-            "description": "Build x64 (Release)",
             "configuration": "Release"
         }
     ],
@@ -115,29 +57,6 @@
             "configuration": "Release",
             "inherits": [
                 "test-ninja"
-            ]
-        },
-        {
-            "name": "test-msvc-x64",
-            "configurePreset": "msvc-x64",
-            "hidden": true
-        },
-        {
-            "name": "test-msvc-x64-debug",
-            "description": "Test x64 (Debug)",
-            "displayName": "Test x64 (Debug)",
-            "configuration": "Debug",
-            "inherits": [
-                "test-msvc-x64"
-            ]
-        },
-        {
-            "name": "test-msvc-x64-release",
-            "description": "Test x64 (Release)",
-            "displayName": "Test x64 (Release)",
-            "configuration": "Release",
-            "inherits": [
-                "test-msvc-x64"
             ]
         }
     ]
