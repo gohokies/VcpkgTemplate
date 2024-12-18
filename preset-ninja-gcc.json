@@ -12,7 +12,7 @@
             "description": "Configure with vcpkg toolchain, generate Ninja project, build with gcc",
             "hidden": true,
             "binaryDir": "${sourceDir}/builds/${presetName}",
-            "generator": "Ninja",
+            "generator": "Ninja Multi-Config",
             "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
