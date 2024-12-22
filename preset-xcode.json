@@ -1,0 +1,37 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 23,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "Xcode",
+            "displayName": "Xcode",
+            "description": "Configure with vcpkg toolchain and generate Xcode project files",
+            "generator": "Xcode",
+            "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "binaryDir": "${sourceDir}/builds/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "Xcode-Debug",
+            "configurePreset": "Xcode",
+            "displayName": "Build (Debug)",
+            "description": "Build (Debug)",
+            "configuration": "Debug"
+        },
+        {
+            "name": "Xcode-Release",
+            "configurePreset": "Xcode",
+            "displayName": "Build (Release)",
+            "description": "Build (Release)",
+            "configuration": "Release"
+        }
+    ]
+}

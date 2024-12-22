@@ -7,7 +7,8 @@
     },
     "include": [
         "preset-ninja-gcc.json",
-        "preset-vs2022-msvc.json"
+        "preset-vs2022-msvc.json",
+        "preset-xcode.json"
     ],
     "configurePresets": [
         {
