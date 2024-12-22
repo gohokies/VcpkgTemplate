@@ -23,7 +23,7 @@
         {
             "name": "vs2022-msvc-x64",
             "inherits": "vs2022-msvc",
-            "displayName": "VS2022-x64",
+            "displayName": "VS2022-X64",
             "architecture":"x64",
             "cacheVariables": {
                 "VCPKG_TARGET_TRIPLET": "x64-windows"
@@ -32,7 +32,7 @@
         {
             "name": "vs2022-msvc-arm64",
             "inherits": "vs2022-msvc",
-            "displayName": "VS2022-arm64",
+            "displayName": "VS2022-Arm64",
             "architecture":"arm64",
             "cacheVariables": {
                 "VCPKG_TARGET_TRIPLET": "arm64-windows"
@@ -41,7 +41,7 @@
         {
             "name": "vs2022-msvc-arm64ec",
             "inherits": "vs2022-msvc",
-            "displayName": "VS2022-arm64ec",
+            "displayName": "VS2022-Arm64ec",
             "architecture": "arm64ec",
             "cacheVariables": {
                 "VCPKG_TARGET_TRIPLET": "arm64ec-windows"
@@ -52,15 +52,15 @@
         {
             "name": "vs2022-msvc-x64-debug",
             "configurePreset": "vs2022-msvc-x64",
-            "displayName": "Build x64 (Debug)",
-            "description": "Build x64 (Debug)",
+            "displayName": "Build X64 (Debug)",
+            "description": "Build X64 (Debug)",
             "configuration": "Debug"
         },
         {
             "name": "vs2022-msvc-x64-release",
             "configurePreset": "vs2022-msvc-x64",
-            "displayName": "Build x64 (Release)",
-            "description": "Build x64 (Release)",
+            "displayName": "Build X64 (Release)",
+            "description": "Build X64 (Release)",
             "configuration": "Release"
         },
         {
