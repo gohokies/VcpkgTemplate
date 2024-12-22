@@ -7,7 +7,7 @@
     },
     "configurePresets": [
         {
-            "name": "Xcode",
+            "name": "xcode",
             "displayName": "Xcode",
             "description": "Configure with vcpkg toolchain and generate Xcode project files",
             "generator": "Xcode",
@@ -20,15 +20,15 @@
     ],
     "buildPresets": [
         {
-            "name": "Xcode-Debug",
-            "configurePreset": "Xcode",
+            "name": "xcode-debug",
+            "configurePreset": "xcode",
             "displayName": "Build (Debug)",
             "description": "Build (Debug)",
             "configuration": "Debug"
         },
         {
-            "name": "Xcode-Release",
-            "configurePreset": "Xcode",
+            "name": "xcode-release",
+            "configurePreset": "xcode",
             "displayName": "Build (Release)",
             "description": "Build (Release)",
             "configuration": "Release"
