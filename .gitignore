@@ -33,3 +33,6 @@
 
 # Folders
 build/*
+builds/*
+vcpkg_installed/*
+.vs/*
